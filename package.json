@@ -83,14 +83,14 @@
     "webpack-dev-server": "^5.1.0"
   },
   "scripts": {
-    "dev": "webpack serve --mode development",
-    "build": "tsc -b && NODE_ENV=production webpack --mode production",
+    "dev": "webpack serve --config webpack.config.cjs --mode development",
+    "build": "tsc -b && NODE_ENV=production webpack --config webpack.config.cjs --mode production",
     "lint-staged": "lint-staged",
     "format": "prettier . --write --ignore-unknown",
     "ci:format": "prettier . --check --ignore-unknown",
     "lint": "eslint ./src",
     "lint:fix": "eslint ./src --fix",
-    "preview": "webpack serve --mode production"
+    "preview": "webpack serve --config webpack.config.cjs --mode production"
   },
   "description": "A modern, Facebook-like platform for scientists to share research, collaborate, and discover new publications.",
   "main": "index.js",
