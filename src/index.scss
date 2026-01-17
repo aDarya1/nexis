@@ -1,6 +1,7 @@
-// Tailwind CSS v4 import - must be processed by Tailwind plugin before SASS
-@import "tailwindcss";
-@custom-variant dark (&:is([data-theme="dark"] *));
+// Tailwind CSS v3 directives for Webpack
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 // SCSS Variables
 $primary-blue: #3b82f6;
@@ -169,7 +170,8 @@ $mobile-breakpoint: 768px;
   --color-comment: #a78bfa;
 }
 
-@theme inline {
+// Theme variables for Tailwind v3
+:root {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -222,11 +224,13 @@ $mobile-breakpoint: 768px;
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    border-color: var(--border);
+    outline-color: hsl(var(--ring) / 0.5);
   }
 
   body {
-    @apply bg-background text-foreground;
+    background-color: var(--background);
+    color: var(--foreground);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }

@@ -26,7 +26,7 @@ interface WeatherData {
   };
 }
 
-const API_KEY = import.meta.env.VITE_WEATHER_API_KEY || "demo";
+const API_KEY = process.env.VITE_WEATHER_API_KEY || "demo";
 const API_URL = "https://api.openweathermap.org/data/2.5/weather";
 
 const getWeatherIcon = (weatherMain: string) => {
