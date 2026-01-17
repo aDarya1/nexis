@@ -21,7 +21,7 @@ A modern, Facebook-like platform for scientists to share research, collaborate, 
 
 - React 18
 - TypeScript
-- Vite
+- WebPack
 - Sass
 - Radix UI components
 
