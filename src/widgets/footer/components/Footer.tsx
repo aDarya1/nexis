@@ -2,10 +2,8 @@ import { cn } from "@/shared/utils/cn";
 
 export function Footer() {
   const authors = [
-    { name: "Ruslan Biedychev", album: "82179" },
     { name: "Darya Atroshchyk", album: "81829" },
     { name: "Dzmitry Varonin", album: "81138" },
-    { name: "Tomasz Pestka", album: "77501" },
   ];
 
   return (
