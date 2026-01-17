@@ -26,6 +26,7 @@ interface WeatherData {
   };
 }
 
+// API key is injected via webpack DefinePlugin
 const API_KEY = process.env.VITE_WEATHER_API_KEY || "demo";
 const API_URL = "https://api.openweathermap.org/data/2.5/weather";
 
@@ -110,9 +111,9 @@ export function WeatherWidget() {
         if (response.status === 404) {
           throw new Error("City not found. Please check the spelling.");
         }
-        if (response.status === 401) {
+        if (response.status === 401 || response.status === 403) {
           throw new Error(
-            "Invalid API key. Please set VITE_WEATHER_API_KEY in your .env file.",
+            "Invalid API key. Please set VITE_WEATHER_API_KEY in your .env file. Get your free API key at openweathermap.org",
           );
         }
         throw new Error("Failed to fetch weather data");

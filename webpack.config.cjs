@@ -151,7 +151,7 @@ module.exports = {
         isProduction ? "production" : "development",
       ),
       "process.env.VITE_WEATHER_API_KEY": JSON.stringify(
-        process.env.VITE_WEATHER_API_KEY || "",
+        process.env.VITE_WEATHER_API_KEY || "demo",
       ),
     }),
     ...(isProduction

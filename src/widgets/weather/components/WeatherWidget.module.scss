@@ -53,20 +53,27 @@
 .searchInputWrapper {
   flex: 1;
   position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .searchIcon {
   position: absolute;
-  left: 0.75rem;
+  left: 0.875rem;
   top: 50%;
   transform: translateY(-50%);
-  width: 1.25rem;
-  height: 1.25rem;
+  width: 1.125rem;
+  height: 1.125rem;
   color: var(--muted-foreground);
+  z-index: 10;
+  pointer-events: none;
 }
 
 .searchInput {
-  padding-left: 2.5rem;
+  width: 100%;
+  padding-left: 2.75rem !important;
+  position: relative;
 }
 
 .errorMessage {
