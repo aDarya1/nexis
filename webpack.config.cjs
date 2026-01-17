@@ -44,19 +44,52 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
-        test: /\.(scss|sass|css)$/,
+        test: /\.module\.(scss|sass|css)$/,
         use: [
           isProduction ? MiniCssExtractPlugin.loader : "style-loader",
           {
             loader: "css-loader",
             options: {
               importLoaders: 2,
+              esModule: true,
               modules: {
-                auto: /\.module\.(scss|sass|css)$/,
+                mode: "local",
                 localIdentName: isProduction
                   ? "[hash:base64:8]"
                   : "[path][name]__[local]--[hash:base64:5]",
+                exportLocalsConvention: "camelCase",
+                namedExport: false,
+                exportOnlyLocals: false,
               },
+            },
+          },
+          {
+            loader: "postcss-loader",
+            options: {
+              postcssOptions: {
+                config: path.resolve(__dirname, "postcss.config.cjs"),
+              },
+            },
+          },
+          {
+            loader: "sass-loader",
+            options: {
+              sassOptions: {
+                silenceDeprecations: ["legacy-js-api"],
+              },
+            },
+          },
+        ],
+      },
+      {
+        test: /\.(scss|sass|css)$/,
+        exclude: /\.module\.(scss|sass|css)$/,
+        use: [
+          isProduction ? MiniCssExtractPlugin.loader : "style-loader",
+          {
+            loader: "css-loader",
+            options: {
+              importLoaders: 2,
             },
           },
           {
