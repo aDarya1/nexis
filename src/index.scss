@@ -394,6 +394,49 @@ $mobile-breakpoint: 768px;
   }
 }
 
+// Global responsive styles
+@media (max-width: 1024px) {
+  main {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 0.875rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  h3 {
+    font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 640px) {
+  body {
+    font-size: 0.8125rem;
+  }
+
+  h1 {
+    font-size: 1.25rem;
+  }
+
+  h2 {
+    font-size: 1.125rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+}
+
 html {
   font-size: var(--font-size);
 }

@@ -7,6 +7,7 @@ import {
   Users,
   Calendar,
   UserSearch,
+  Cloud,
   type LucideProps,
 } from "lucide-react";
 
@@ -26,5 +27,6 @@ export const menuItems: {
   { icon: Users, label: "Groups", id: "groups" },
   { icon: Calendar, label: "Calendar", id: "calendar" },
   { icon: UserSearch, label: "Collaborators", id: "collaborators" },
+  { icon: Cloud, label: "Weather", id: "weather" },
   { icon: User, label: "Profile", id: "profile" },
 ];

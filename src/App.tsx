@@ -31,6 +31,7 @@ import { HomeFeed } from "@/widgets/home-feed/components/HomeFeed";
 import { LibraryDownloads } from "@/widgets/library-downloads/components/LibraryDownloads";
 import { Sidebar } from "@/widgets/sidebar/components/Sidebar";
 import { TopicGroups } from "@/widgets/topic-groups/components/TopicGroups";
+import { WeatherWidget } from "@/widgets/weather/components/WeatherWidget";
 
 export default function App() {
   return (
@@ -173,6 +174,8 @@ function AppContent() {
           {state.currentScreen === "calendar" && <ConferenceCalendar />}
 
           {state.currentScreen === "collaborators" && <CollaboratorSearch />}
+
+          {state.currentScreen === "weather" && <WeatherWidget />}
 
           {state.currentScreen === "downloads" && (
             <LibraryDownloads

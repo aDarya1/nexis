@@ -30,4 +30,5 @@ export type Screen =
   | "calendar"
   | "collaborators"
   | "profile"
+  | "weather"
   | "article-detail";

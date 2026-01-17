@@ -26,6 +26,7 @@ import { HomeFeed } from "@/widgets/home-feed/components/HomeFeed";
 import { LibraryDownloads } from "@/widgets/library-downloads/components/LibraryDownloads";
 import { MobileSidebar } from "@/widgets/sidebar/components/MobileSidebar";
 import { TopicGroups } from "@/widgets/topic-groups/components/TopicGroups";
+import { WeatherWidget } from "@/widgets/weather/components/WeatherWidget";
 
 export function MobileApp() {
   const dispatch = useDispatch();
@@ -90,8 +91,7 @@ export function MobileApp() {
 
   return (
     <div
-      className="min-h-screen w-full flex flex-col transition-colors duration-300 overflow-x-hidden bg-background"
-      style={{ width: "100vw", maxWidth: "100%" }}
+      className="min-h-screen w-full max-w-full flex flex-col transition-colors duration-300 overflow-x-hidden bg-background"
     >
       <MobileHeader
         onMenuClick={() => setShowMobileMenu(true)}
@@ -134,6 +134,8 @@ export function MobileApp() {
         {state.currentScreen === "calendar" && <ConferenceCalendar />}
 
         {state.currentScreen === "collaborators" && <CollaboratorSearch />}
+
+        {state.currentScreen === "weather" && <WeatherWidget />}
 
         {state.currentScreen === "downloads" && (
           <LibraryDownloads
