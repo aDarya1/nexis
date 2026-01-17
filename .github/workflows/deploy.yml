@@ -35,7 +35,7 @@ jobs:
         run: npm run build
         env:
           NODE_ENV: production
-          VITE_WEATHER_API_KEY: ${{ secrets.VITE_WEATHER_API_KEY }}
+          VITE_WEATHER_API_KEY: b5a58d50de78775c12219b245a475147
 
       - name: Setup Pages
         uses: actions/configure-pages@v4

@@ -74,14 +74,14 @@
   width: 100%;
   padding-left: 2.75rem !important;
   position: relative;
-  color: var(--foreground) !important;
+  color: #000000 !important; // Black text in all theme modes
   
   &::placeholder {
     color: var(--muted-foreground);
   }
   
   @media (prefers-color-scheme: dark) {
-    color: var(--foreground) !important;
+    color: #000000 !important; // Black text in dark mode too
     
     &::placeholder {
       color: var(--muted-foreground);
@@ -89,7 +89,7 @@
   }
   
   [data-theme="dark"] & {
-    color: var(--foreground) !important;
+    color: #000000 !important; // Black text in dark theme too
     
     &::placeholder {
       color: var(--muted-foreground);
