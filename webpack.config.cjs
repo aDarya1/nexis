@@ -18,7 +18,7 @@ module.exports = {
       ? "assets/js/[name].[contenthash:8].chunk.js"
       : "assets/js/[name].chunk.js",
     assetModuleFilename: "assets/[name].[hash:8][ext]",
-    publicPath: "/nexis-proj/",
+    publicPath: "/nexis/",
     clean: true,
   },
   resolve: {
@@ -178,9 +178,9 @@ module.exports = {
     port: 3000,
     open: true,
     hot: true,
-    historyApiFallback: {
-      index: "/nexis-proj/index.html",
-    },
+        historyApiFallback: {
+          index: "/nexis/index.html",
+        },
     compress: true,
   },
   devtool: isProduction ? "source-map" : "eval-source-map",
