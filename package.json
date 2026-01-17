@@ -64,6 +64,8 @@
     "@types/webpack-env": "^1.18.8",
     "autoprefixer": "^10.4.20",
     "css-loader": "^7.1.2",
+    "dotenv": "^17.2.3",
+    "dotenv-webpack": "^8.1.1",
     "eslint": "^9.39.2",
     "eslint-plugin-import": "^2.32.0",
     "html-webpack-plugin": "^5.6.0",

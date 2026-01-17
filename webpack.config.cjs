@@ -2,6 +2,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { DefinePlugin } = require("webpack");
+const Dotenv = require("dotenv-webpack");
 
 const isProduction = process.env.NODE_ENV === "production";
 
@@ -127,6 +128,12 @@ module.exports = {
     ],
   },
   plugins: [
+    new Dotenv({
+      path: path.resolve(__dirname, ".env"),
+      systemvars: true,
+      safe: false,
+      defaults: false,
+    }),
     new HtmlWebpackPlugin({
       template: "./index.html",
       filename: "index.html",
@@ -151,7 +158,7 @@ module.exports = {
         isProduction ? "production" : "development",
       ),
       "process.env.VITE_WEATHER_API_KEY": JSON.stringify(
-        process.env.VITE_WEATHER_API_KEY || "demo",
+        process.env.VITE_WEATHER_API_KEY || "b5a58d50de78775c12219b245a475147",
       ),
     }),
     ...(isProduction
