@@ -22,7 +22,7 @@ A modern, Facebook-like platform for scientists to share research, collaborate, 
 - React 18
 - TypeScript
 - Vite
-- Tailwind CSS
+- Sass
 - Radix UI components
 
 ## Running the code
@@ -37,9 +37,7 @@ See [DEPLOYMENT.md](./DEPLOYMENT.md) for GitHub Pages deployment instructions.
 
 ## Authors
 
-- Ruslan Biedychev (nr. albumu 82179)
 - Darya Atroshchyk (nr. albumu 81829)
 - Dzmitry Varonin (nr. albumu 81138)
-- Tomasz Pestka  (nr. albumu 77501)
 
 UWSB Merito Gdańsk - 2026
