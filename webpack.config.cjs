@@ -134,25 +134,26 @@ module.exports = {
       safe: false,
       defaults: false,
     }),
-    new HtmlWebpackPlugin({
-      template: "./index.html",
-      filename: "index.html",
-      inject: true,
-      minify: isProduction
-        ? {
-            removeComments: true,
-            collapseWhitespace: true,
-            removeRedundantAttributes: true,
-            useShortDoctype: true,
-            removeEmptyAttributes: true,
-            removeStyleLinkTypeAttributes: true,
-            keepClosingSlash: true,
-            minifyJS: true,
-            minifyCSS: true,
-            minifyURLs: true,
-          }
-        : false,
-    }),
+        new HtmlWebpackPlugin({
+          template: "./index.html",
+          filename: "index.html",
+          inject: true,
+          favicon: "./src/assets/iconnex.png",
+          minify: isProduction
+            ? {
+                removeComments: true,
+                collapseWhitespace: true,
+                removeRedundantAttributes: true,
+                useShortDoctype: true,
+                removeEmptyAttributes: true,
+                removeStyleLinkTypeAttributes: true,
+                keepClosingSlash: true,
+                minifyJS: true,
+                minifyCSS: true,
+                minifyURLs: true,
+              }
+            : false,
+        }),
     new DefinePlugin({
       "process.env.NODE_ENV": JSON.stringify(
         isProduction ? "production" : "development",
