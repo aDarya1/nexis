@@ -74,6 +74,27 @@
   width: 100%;
   padding-left: 2.75rem !important;
   position: relative;
+  color: var(--foreground) !important;
+  
+  &::placeholder {
+    color: var(--muted-foreground);
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    color: var(--foreground) !important;
+    
+    &::placeholder {
+      color: var(--muted-foreground);
+    }
+  }
+  
+  [data-theme="dark"] & {
+    color: var(--foreground) !important;
+    
+    &::placeholder {
+      color: var(--muted-foreground);
+    }
+  }
 }
 
 .errorMessage {
