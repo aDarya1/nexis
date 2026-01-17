@@ -51,7 +51,7 @@ module.exports = {
             loader: "css-loader",
             options: {
               importLoaders: 2,
-              esModule: true,
+              esModule: false,
               modules: {
                 mode: "local",
                 localIdentName: isProduction
